@@ -1,4 +1,90 @@
-.heading
+/*Note: Colour scheme is: 
+Main: #0A1A2F
+Secondary (lighter version of main): #3C4C61 
+Accent 1: #A259FF
+Accent 2: #00E5FF
+Text: #FFF*/
+:root
+{
+    --main: #0A1A2F;
+    --secondary: #253447;
+    --accent-1: #A259FF;
+    --accent-2: #00E5FF;
+}
+/*Color styling*/
+.main-bg
+{
+    background-color: var(--main);
+    border-color: var(--main);
+}
+.secondary-bg
+{
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+}
+.text
+{
+    color: #fff;
+}
+.accent-1
+{
+    background-color: var(--accent-1);
+    border-color: var(--accent-1);
+}
+.accent-2
+{
+    background-color: var(--accent-2);
+    border-color: var(--accent-2);
+}
+/*Semantic html styling*/
+.header
 {
     text-align: center;
+    font-size: clamp(3rem, 2vw, 5rem);
+    height: 10vh;
+    width: auto;
+    min-height: 5rem;
+}
+.main
+{
+    width: 100%;
+    height: 80vh;
+}
+.section
+{
+    width: 90%;
+    min-height: 75vh;
+    padding: clamp(1rem, 1vw, 3rem)
+}
+/*Flexbox styling*/
+.flexbox
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+/*Width/Height styling*/
+.width-100
+{
+    width: 100%
+}
+/*Text styling*/
+.header-text
+{
+    font-size: clamp(3rem, 2vw, 5rem);
+    font-family: "Montserrat", sans-serif;
+}
+.subheading-text
+{
+    font-size: clamp(2rem, 1.5vw, 3rem);
+    font-family: "Montserrat", sans-serif;
+}
+.body-text
+{
+    font-family: "Inter", sans-serif;
+}
+.margin-0
+{
+    margin: 0rem;
 }
