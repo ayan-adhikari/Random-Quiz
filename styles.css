@@ -57,6 +57,17 @@ Text: #FFF*/
     min-height: 75vh;
     padding: clamp(1rem, 1vw, 3rem)
 }
+/*Answer butttons styling*/
+.answer
+{
+    background-color: #0F2238;
+    transition: background-color 0.5s ease-in-out;
+    border-radius: 1rem;
+}
+.answer:hover
+{
+    background-color: var(--accent-1);
+}
 /*Flexbox/Grid styling*/
 .flexbox
 {
@@ -68,8 +79,10 @@ Text: #FFF*/
 .answer-grid
 {
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 90%;
     overflow: hidden;
+    justify-content: center;
+    justify-items: center;
 }
 /*Width/Height styling*/
 .width-100
@@ -103,7 +116,7 @@ Text: #FFF*/
 {
     .answer-grid
     {
-        grid-template-columns: repeat(2, 50%);
+        grid-template-columns: repeat(2, 45%);
         grid-gap: 1rem;
     }
 }
