@@ -25,6 +25,7 @@ Text: #FFF*/
 .text
 {
     color: #fff;
+    text-align: center;
 }
 .accent-1
 {
@@ -56,7 +57,7 @@ Text: #FFF*/
     min-height: 75vh;
     padding: clamp(1rem, 1vw, 3rem)
 }
-/*Flexbox styling*/
+/*Flexbox/Grid styling*/
 .flexbox
 {
     display: flex;
@@ -64,10 +65,16 @@ Text: #FFF*/
     justify-content: center;
     align-content: center;
 }
+.answer-grid
+{
+    display: grid;
+    grid-template-columns: 100%;
+    overflow: hidden;
+}
 /*Width/Height styling*/
 .width-100
 {
-    width: 100%
+    width: 100%;
 }
 /*Text styling*/
 .header-text
@@ -87,4 +94,16 @@ Text: #FFF*/
 .margin-0
 {
     margin: 0rem;
+}
+.margin-1
+{
+    margin: 1rem;
+}
+@media screen and (min-width: 600px)
+{
+    .answer-grid
+    {
+        grid-template-columns: repeat(2, 50%);
+        grid-gap: 1rem;
+    }
 }
