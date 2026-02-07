@@ -12,8 +12,9 @@ const answerB = document.getElementById(`answer-B`)
 const answerC = document.getElementById(`answer-C`)
 const answerD = document.getElementById(`answer-D`)
 
-//Arrays
+//Other Arrays
 const multipliers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+let wrongs;
 
 //Event Listeners
 answerA.addEventListener(`click`, clickedA)
@@ -93,12 +94,62 @@ function generateQuestion()
         {
             generateWrongs()
         }
+        wrongs = [wrong1, wrong2, wrong3]
     }
     generateWrongs()
     function assignWrongs()
     {
-        randInt = generateRandomNumber(1, 3)
+        randInt = generateRandomNumber(1, 4)
+        if (correctOption == `A`)
+        {
+            //Assign wrongs to B, C and D
+            randInt = generateRandomNumber (0, 2)
+            answerB.textContent = `${wrongs[randInt]}`
+            wrongs.splice(randInt, 1);
+            randInt = generateRandomNumber (0, 1)
+            answerC.textContent = `${wrongs[randInt]}`
+            wrongs.splice(randInt, 1);
+            randInt = 0
+            answerD.textContent = `${wrongs[randInt]}`
+        }
+        else if (correctOption == `B`)
+        {
+            //Assign wrongs to A, C and D
+            randInt = generateRandomNumber (0, 2)
+            answerA.textContent = `${wrongs[randInt]}`
+            wrongs.splice(randInt, 1);
+            randInt = generateRandomNumber (0, 1)
+            answerC.textContent = `${wrongs[randInt]}`
+            wrongs.splice(randInt, 1);
+            randInt = 0
+            answerD.textContent = `${wrongs[randInt]}`
+        }
+        else if (correctOption == `C`)
+        {
+            //Assign wrongs to A, B and D
+            randInt = generateRandomNumber (0, 2)
+            answerA.textContent = `${wrongs[randInt]}`
+            wrongs.splice(randInt, 1);
+            randInt = generateRandomNumber (0, 1)
+            answerB.textContent = `${wrongs[randInt]}`
+            wrongs.splice(randInt, 1);
+            randInt = 0
+            answerD.textContent = `${wrongs[randInt]}`
+        }
+        else if (correctOption == `D`)
+        {
+            //Assign wrongs to A, B and C
+            randInt = generateRandomNumber (0, 2)
+            answerA.textContent = `${wrongs[randInt]}`
+            wrongs.splice(randInt, 1);
+            randInt = generateRandomNumber (0, 1)
+            answerB.textContent = `${wrongs[randInt]}`
+            wrongs.splice(randInt, 1);
+            randInt = 0
+            answerC.textContent = `${wrongs[randInt]}`
+            
+        }
     }
-    //assignWrongs() commented out while it is being made
+    assignWrongs()
     
 }

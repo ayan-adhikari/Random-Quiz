@@ -41,10 +41,10 @@ Text: #FFF*/
 .header
 {
     text-align: center;
-    font-size: clamp(3rem, 2vw, 5rem);
-    height: 10vh;
+    font-size: clamp(2.5rem, 2vw, 5rem);
+    height: auto;
     width: auto;
-    min-height: 5rem;
+    min-height: 3rem;
     margin-bottom: clamp(1rem, 1vh, 10rem)
 }
 .main
@@ -70,6 +70,10 @@ Text: #FFF*/
 {
     background-color: var(--accent-1);
 }
+.answer:active
+{
+    transform: scale(0.9);
+}
 /*Flexbox/Grid styling*/
 .flexbox
 {
@@ -82,7 +86,7 @@ Text: #FFF*/
 {
     display: flex;
     align-items: center;
-    justify-content: top;
+    justify-content: flex-start;
     align-content: center;
     flex-direction: column;
 }
