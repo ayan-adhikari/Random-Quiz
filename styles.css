@@ -4,6 +4,7 @@ Secondary (lighter version of main): #3C4C61
 Accent 1: #A259FF
 Accent 2: #00E5FF
 Text: #FFF*/
+/*Variables (Mainly for being able to easily change color scheme any time)*/
 :root
 {
     --main: #0A1A2F;
@@ -119,6 +120,7 @@ Text: #FFF*/
     font-size: clamp(3rem, 5vw, 7rem);
     font-family: "Inter", sans-serif;
 }
+/*Margin styling*/
 .margin-0
 {
     margin: 0rem;
@@ -127,6 +129,7 @@ Text: #FFF*/
 {
     margin: 1rem;
 }
+/*Media query that changes button layout to 2*2 instead of 1*4 when screen is 600+px wide*/
 @media screen and (min-width: 600px)
 {
     .answer-grid
