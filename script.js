@@ -177,7 +177,6 @@ function generateQuestion()
             //Set randInt to 0 since all other values have been taken
             randInt = 0
             answerC.textContent = `${wrongs[randInt]}`
-            
         }
     }
     assignWrongs()
